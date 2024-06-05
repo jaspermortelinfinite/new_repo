@@ -1,0 +1,8 @@
+{
+  "owner": "jasper",
+  "priority": "0",
+  "processingType": "TRIGGER",
+  "triggerType": "SCHEDULE",
+  "customFieldValues": {
+  }
+}

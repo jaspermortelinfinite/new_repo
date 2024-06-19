@@ -1,0 +1,8 @@
+{
+  "codeRepository": "[Jasper]new_repo",
+  "description": "linux node",
+  "serverNodeType": "LINUX",
+  "totalWeightCapacity": 50,
+  "customFieldValues": {
+  }
+}

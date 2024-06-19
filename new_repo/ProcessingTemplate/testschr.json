@@ -1,0 +1,9 @@
+{
+  "owner": "jasper",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "taskType": "SH",
+  "customFieldValues": {
+  }
+}

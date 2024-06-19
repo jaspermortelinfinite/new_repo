@@ -1,0 +1,26 @@
+{
+  "owner": "jasper",
+  "priority": "0",
+  "processingType": "TRIGGER",
+  "triggerType": "SCHEDULE",
+  "customFieldValues": {
+  },
+  "items": 
+  [
+    {
+      "name": "hello_world",
+      "processingTemplate": "hello_world"
+    }
+  ],
+  "timeTriggers": 
+  [
+    {
+      "calculateProcessingTimestampUsingLocalTime": true,
+      "endTime": 86399999,
+      "repeatInterval": 3600000,
+      "startTime": 57600000,
+      "timeTriggerType": "DAILY",
+      "timeZone": "Europe/Warsaw"
+    }
+  ]
+}

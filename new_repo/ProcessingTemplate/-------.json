@@ -1,0 +1,97 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
+  "node": "TMG_AS_ROOT",
+  "owner": "i",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
+  "taskType": "SH",
+  "title": "-------",
+  "customFieldValues": {
+    "CF1": "abcdef",
+    "CostCenter": "123-321-344648957459867",
+    "NAZWA_BIZNESOWA": "NB",
+    "NR_INSTANCJI": "123",
+    "ZnacznikPrzyrostu": "111111111111"
+  },
+  "processingCommand": {
+    "script": "echo \"ANOWVAR:AA=`uname -a`\"\n\nexit 4"
+  },
+  "actions": 
+  [
+    {
+      "processingActionType": "ADD_TAG",
+      "processingEventCategory": "PROCESSING",
+      "processingEventType": "PROCESSING_FAILED",
+      "processingCommand": {
+        "actionTargetType": "SELF",
+        "restartType": "RESTART_FROM_BEGINNING",
+        "value": "OJ"
+      }
+    },
+    {
+      "processingActionType": "PROCESSING_ADD_NOTE",
+      "processingEventCategory": "PROCESSING",
+      "processingEventType": "PROCESSING_FAILED",
+      "processingCommand": {
+        "actionTargetType": "SELF",
+        "keepForcedStatus": true,
+        "note": "We have a problem with this Task",
+        "noteType": "INFO",
+        "restartType": "RESTART_FROM_BEGINNING"
+      }
+    },
+    {
+      "processingActionType": "PROCESSING_ADD_NOTE",
+      "processingEventCategory": "PROCESSING",
+      "processingEventType": "PROCESSING_COMPLETED",
+      "condition": {
+        "criteria": 
+        [
+          {
+            "fieldName": "id",
+            "operator": "EQ_NUM",
+            "value": "1"
+          }
+        ],
+        "operator": "AND"
+      },
+      "processingCommand": {
+        "actionTargetType": "SELF",
+        "keepForcedStatus": true,
+        "note": "it is ok",
+        "noteType": "INFO",
+        "operator": "",
+        "restartType": "RESTART_FROM_BEGINNING"
+      }
+    }
+  ],
+  "dependencies": 
+  [
+    {
+      "dependencyType": "RESOURCE",
+      "name": "1P",
+      "processingStatus": "COMPLETED",
+      "processingType": "TASK",
+      "resource": "1P",
+      "resourcePermits": "3",
+      "resourceType": "STOCK",
+      "serverNodeType": "LINUX",
+      "taskType": "SH"
+    }
+  ],
+  "designParameters": 
+  [
+    {
+      "editorType": "FILE_PICKER",
+      "endpoint": "DS_D1_SFTP",
+      "name": "FP",
+      "serverNode": "[Test]DS_FM",
+      "title": "FP"
+    }
+  ]
+}

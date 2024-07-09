@@ -1,0 +1,30 @@
+{
+  "highRiskStatisticMethod": "COUNT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "node": "${Y}",
+  "owner": "i",
+  "priority": "${X}",
+  "processingType": "TASK",
+  "resultMapping": "${R}",
+  "serverNodeType": "WINDOWS",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SH",
+  "weight": "${X}",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "echo ala ma kota ${endpoint.USER}\n\necho ok\n\nsleep 20\n\ndate\n\n"
+  },
+  "designParameters": 
+  [
+    {
+      "defaultValue": "TMG_AS_ROOT",
+      "editorType": "TEXT",
+      "evaluateExpressions": true,
+      "name": "Y",
+      "title": "Y"
+    }
+  ]
+}

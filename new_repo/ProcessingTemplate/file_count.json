@@ -1,0 +1,13 @@
+{
+  "description": "file counter",
+  "owner": "jasper",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "taskType": "SH",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "#!/bin/bash \nfile_count=$(ls | wc -l) \necho \"The number of files in the current directory is: $file_count\"\nsleep 10"
+  }
+}

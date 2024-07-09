@@ -1,0 +1,13 @@
+{
+  "description": "Hello World Script",
+  "owner": "jasper",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "taskType": "SH",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "#!/bin/bash \necho \"Hello, world!\""
+  }
+}
